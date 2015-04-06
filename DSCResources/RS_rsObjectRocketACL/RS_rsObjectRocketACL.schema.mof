@@ -1,0 +1,7 @@
+[ClassVersion("1.0.0"), FriendlyName("rsObjectRocketACL")]
+class RS_rsObjectRocketACL : OMI_BaseResource
+{
+    [key, description("The ObjectRocket API Key")] string APIKey;
+	[write, description("An ACL contains a description of the server being adding. This will prefix that description.")] string Description;
+	[write,ValueMap{"Present", "Absent"},Values{"Present", "Absent"}] string Ensure;
+};
