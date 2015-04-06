@@ -1,7 +1,9 @@
 [ClassVersion("1.0.0"), FriendlyName("rsObjectRocketACL")]
 class RS_rsObjectRocketACL : OMI_BaseResource
 {
-    [key, description("The ObjectRocket API Key")] string APIKey;
-	[write, description("An ACL contains a description of the server being adding. This will prefix that description.")] string Description;
+    [key, description("The ObjectRocket API Key")] string orAPIKey;
+	[key, description("The Rackspace API Key")] string rsAPIKey;
+	[write, description("An ACL contains a description of the server being added.")] string Description;
+	[write, description("RS Cloud Server Metadata Tag. This value should match what is in your yaml template.")] string orMetaTag;
 	[write,ValueMap{"Present", "Absent"},Values{"Present", "Absent"}] string Ensure;
 };
